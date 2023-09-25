@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string a;
+    cin>>a;
+    string b;
+    cin>>b;
+    int len1=a.size();
+    int len2=b.size();
+    cout<<len1<<" "<<len2<<endl;
+    cout<<a+b<<endl;
+    char arr1[len1];
+    char arr2[len2];
+    for (int i=0;i<len1;i++){
+        arr1[i]=a[i];
+    }
+    for (int i=0;i<len2;i++){
+        arr2[i]=b[i];
+    }
+    char x=arr1[0];
+    char y=arr2[0];
+    arr2[0]=x;
+    arr1[0]=y;
+    string a_new="";
+    string b_new="";
+    for(int i=0;i<len1;i++){
+        a_new=a_new+arr1[i];
+    }
+    for(int i=0;i<len2;i++){
+        b_new=b_new+arr2[i];
+    }
+    cout<<a_new<<" "<<b_new;
+    return 0;
+}
+
