@@ -48,3 +48,32 @@ int main()
    swap_alternate_elements_in_array(numbers,size);
     return 0;
 }
+//--------SOLUTION METHOD 2-------------------------
+//khatarnak logic
+//very efficient
+#include<iostream>
+using namespace std;
+//{1,2,3,4,5,6,7,8}   ke liye we want {2,1,4,3,6,5}
+//{1,2,3,4,5,6,7} ke liye we want {2,1,4,3,6,5,7}
+void swap(int arr[], int size){
+    for(int i = 1 ; i <= (size-1) ; i=i+2){
+        int x = arr[i];
+        int y = arr[i-1];
+        arr[ i ]=   y ;
+        arr[i-1]=   x ;
+    }
+    for(int i = 0 ; i<(size) ; i++){
+            cout<<arr[i]<<" ";
+        }
+    cout<<endl;
+}
+
+int main(){
+    int size;
+    cin>>size;
+    int numbers[100];
+    for(int i=0; i<size ; i++){
+        cin>>numbers[i];
+    }
+    swap(numbers, size);
+}
