@@ -1,5 +1,5 @@
 /*
-QUE: BINARY SEARCH
+QUE: linear SEARCH
 input an array and a key and tell whether key is there in array or not 
 */
 //SOLUTION
